@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="reg.css">
+    <script>
+        function myFun() {
+            var cor_way = /^[A-Za-z]+$/; /*text validation*/
+            var a = document.getElementById("Na_Me").value; /*f name*/
+            var b = document.getElementById("L_Name").value; /*l name*/
+            var c = document.myForm.Email.value; /*email*/
+            var d = document.getElementById("mob_no").value; /*mobile no*/
+            var e = document.getElementById("pass").value; /*password*/
+            var f = document.getElementById("pas").value; /*confirm password*/
+
+            /*Password Validation*/
+            if (e == "") {
+                document.getElementById("Ded").innerHTML = "** Please Enter Password";
+                return false;
+            }
+            if (e.length < 5) {
+                document.getElementById("Ded").innerHTML = "** Password Must Be Greater Than 5 Digits";
+                return false;
+            }
+            if (e.length > 20) {
+                document.getElementById("Ded").innerHTML = "** Password Must Be Less Than 20 Digits";
+                return false;
+            }
+
+            /*confirm password validation*/
+            if (e != f) {
+                document.getElementById("Deed").innerHTML = "** Password Is Not Same";
+                return false;
+            }
+
+            /*mobile no validation*/
+            if (d == "") {
+                document.getElementById("Net").innerHTML = "** Please Enter Your Mobile No";
+                return false;
+            }
+            if (isNaN(d)) {
+                document.getElementById("Net").innerHTML = "** Only Numbers Are Allowed";
+                return false;
+            }
+            if (d.length < 10) {
+                document.getElementById("Net").innerHTML = "** Mobile No Should Be Carry 10 Digits";
+                return false;
+            }
+            if (d.length > 10) {
+                document.getElementById("Net").innerHTML = "** Mobile No Should Be Carry 10 Digits";
+                return false;
+            }
+            if ((d.charAt(0) != 9) && (d.charAt(0) != 8) && (d.charAt(0) != 7)) {
+                document.getElementById("Net").innerHTML = "** Please Enter Indian Mobile No";
+                return false;
+            }
+
+            /*email validation*/
+            if (c == "") {
+                document.getElementById("Rest").innerHTML = "** Please Enter Your Email";
+                return false;
+            }
+            if (c.indexOf('@') <= 0) {
+                document.getElementById("Rest").innerHTML = "** Invalid Email";
+                return false;
+            }
+            if ((c.charAt(c.length - 4) != '.') && (c.charAt(c.length - 3) != '.')) {
+                document.getElementById("Rest").innerHTML = "** Invalid Email";
+                return false;
+            }
+
+            /*first Name validation*/
+            if (a == "") {
+                document.getElementById("Message").innerHTML = "** Please Enter Your First Name";
+                return false;
+            }
+            if (a.length < 3) {
+                document.getElementById("Message").innerHTML = "** First name should be contain 3 letters and less than 10 letters";
+                return false;
+            }
+            if (a.length > 10) {
+                document.getElementById("Message").innerHTML = "** First name should be contain 3 letters and less than 10 letters";
+                return false;
+            }
+            if (a.match(cor_way))
+                true;
+            else {
+                document.getElementById("Message").innerHTML = "** Only Alphabets Allowed";
+                return false;
+
+                /*last Name validation*/
+            }
+            if (b == "") {
+                document.getElementById("Test").innerHTML = "** Please Enter Your Last Name";
+                return false;
+            }
+            if (b.length < 3) {
+                document.getElementById("Test").innerHTML = "** Last Name should be contain 3 letters and less than 10 letters";
+                return false;
+            }
+            if (b.length > 10) {
+                document.getElementById("Test").innerHTML = "** Last name should be contain 3 letters and less than 10 letters";
+                return false;
+            }
+            if (b.match(cor_way))
+                true;
+            else {
+                document.getElementById("Test").innerHTML = "** Only Alphabets Allowed";
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="regist">
+        <h1><b>Registration Form</b></h1>
+        <form name="myForm" method="POST" onsubmit="return myFun()" action="submit.php">
+            <p>First Name</p>
+            <input type="text" id="Na_Me" name="first_name" placeholder="First Name">
+            <span id="Message"></span>
+            <p>Last Name</p>
+            <input type="text" id="L_Name" name="last_name" placeholder="Last Name">
+            <span id="Test"></span>
+            <p>E-mail</p>
+            <input type="text" name="Email" value="" placeholder="E-mail">
+            <span id="Rest"></span>
+            <p>Mobile Number</p>
+            <input type="text" id="mob_no" value="" name="mobile" placeholder="Mobile Number">
+            <span id="Net"></span>
+            <p>Password</p>
+            <input type="password" id="pass" name="password" value="" placeholder="Password">
+            <span id="Ded"></span>
+            <p>Confirm Password</p>
+            <input type="password" id="pas" name="" value="" placeholder="Confirm Password">
+            <span id="Deed"></span>
+            <input type="submit" name="submit" value="Submit">
+            <input type="reset" name="" value="Reset">
+        </form>
+    </div>
+
+</body>
+
+</html>

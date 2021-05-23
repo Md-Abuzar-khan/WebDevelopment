@@ -1,0 +1,130 @@
+    body {
+        margin: 0;
+        padding: 0;
+        background: url(cat.jpg);
+        background-size: cover;
+        font-family: sans-serif;
+    }
+    
+    .loginbox {
+        width: 320px;
+        height: 420px;
+        background: #000;
+        color: #fb2525;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        background: transparent;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: 33%;
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    .loginbox p {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+    
+    .loginbox input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .loginbox input[type="text"],
+    input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #fb2525;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .loginbox input[type="submit"] {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 103%;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+    
+    .loginbox input[type="submit"]:hover {
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    }
+    
+    .loginbox a {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fb2525;
+    }
+    
+    .loginbox a:hover {
+        color: deepskyblue;
+    }
+    
+    .loginbox a {
+        font-size: 14px;
+        text-decoration: none;
+        color: crimson;
+        opacity: 0.8;
+    }
+    
+    .loginbox a:hover {
+        color: darkorange;
+        opacity: 1;
+    }
+    
+    .social {
+        margin: 12px;
+        text-align: center;
+    }
+    
+    .social a {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border: 1px solid #411520;
+        border-radius: 50%;
+        margin: 0px;
+    }
+    
+    .social a:nth-child(1) {
+        background: slateblue;
+    }
+    
+    .social a:nth-child(2) {
+        background: rgb(8, 49, 59);
+    }
+    
+    .social a:nth-child(3) {
+        background: rgb(92, 4, 66);
+    }
+    
+    .social a i {
+        padding: 8px 0;
+    }

@@ -1,0 +1,80 @@
+    body {
+        margin: 0;
+        padding: 0;
+        background: url(cat.jpg);
+        background-size: cover;
+        font-family: sans-serif;
+    }
+    
+    .regist {
+        width: 400px;
+        height: 700px;
+        background: #000;
+        color: #fb2525;
+        top: 45%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        background: transparent;
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 0 0 30px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .regist p {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+    
+    .regist input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .regist input[type="text"],
+    input[type="text"],
+    input[type="text"],
+    input[type="text"],
+    input[type="password"],
+    input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #fb2525;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .regist input[type="submit"],
+    input[type="reset"] {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 103%;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+    
+    .regist input[type="submit"]:hover {
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    }
+    
+    .regist input[type="reset"]:hover {
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    }
